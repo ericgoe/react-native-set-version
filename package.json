@@ -32,8 +32,7 @@
   "main": "index.js",
   "author": "Novom Interactive",
   "scripts": {
-    "prepublishOnly": "yarn build",
-    "build": "babel src --out-dir build --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\"",
+    "prepare": "babel src --out-dir build --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\"",
     "lint": "eslint .",
     "start": "node .src/index.js",
     "test": "yarn lint & yarn unitTests",
