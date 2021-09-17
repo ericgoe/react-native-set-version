@@ -147,10 +147,10 @@ async function setAndroidApplicationVersion(versionText) {
 
 const changeVersion = async () => {
   const versionText = process.argv[2];
-  const appName = setPackageVersion(versionText).name;
+  const appName = setPackageVersion(versionText).displayName;
 
   paths.infoPlist = paths.infoPlist.replace('<APP_NAME>', appName);
-  await setAndroidApplicationVersion(versionText);
+  // await setAndroidApplicationVersion(versionText);
   await setIosApplicationVersion(versionText);
 
   display('');
